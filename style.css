@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -161,13 +163,14 @@ html {
     flex: 0 1 350px;
     font-size: 18px;
     line-height: 1.8;
-    color: #1a1a1a;
+    color: #ffffff;
     backdrop-filter: blur(10px);
 }
 
 .story-text p {
     margin: 0;
-    font-family: 'Courier New', monospace;
+    font-family: 'Oranienbaum', serif;
+    color: #ffffff;
 }
 
 .story-images {
@@ -252,6 +255,12 @@ html {
         border-radius: 20px;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(209, 176, 95, 0.25));
         backdrop-filter: blur(10px);
+        color: #ffffff;
+    }
+
+    .story-text p {
+        color: #ffffff;
+        font-family: 'Oranienbaum', serif;
     }
 
     .story-images,
