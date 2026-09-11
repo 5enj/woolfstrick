@@ -287,6 +287,34 @@ html {
     height: 257px;
 }
 
+/* IMAGE LABELS */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-label {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+/* wookfcreek.png label */
+.label-wookfcreek {
+    left: 0;
+    top: 778px;
+}
+
+/* until dawn yippie label */
+.label-yippie {
+    left: 0;
+    top: 267px;
+}
+
 /* FOOTER */
 .footer {
     background: #000;
