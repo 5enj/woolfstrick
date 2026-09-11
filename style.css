@@ -244,6 +244,37 @@ html {
     right: 1300px;
 }
 
+/* IMAGE SIZES */
+.img-wookfcreek {
+    width: 1376px;
+    height: 768px;
+}
+
+.img-yippie {
+    width: 178px;
+    height: 257px;
+}
+
+.img-scene1 {
+    width: 184px;
+    height: 258px;
+}
+
+.img-forest {
+    width: 207px;
+    height: 258px;
+}
+
+.img-small {
+    width: 187px;
+    height: 113px;
+}
+
+.img-scene2 {
+    width: 203px;
+    height: 257px;
+}
+
 /* FOOTER */
 .footer {
     background: #000;
