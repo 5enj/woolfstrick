@@ -224,14 +224,14 @@ html {
 /* wookfcreek.png */
 .image-left-500 {
     position: absolute;
-    left: 1100px;
+    left: -300px;
     top: 60px;
 }
 
 /* until dawn yippie_20260903_191157_0000.png */
 .image-left-960 {
     position: absolute;
-    left: 1900px;
+    left: 650px;
     top: 60px;
 }
 
@@ -240,6 +240,7 @@ html {
     position: absolute;
     top: 200px;
     right: 1000px;
+    z-index: 10;
 }
 
 /* У ту ніч місцевий історик... текст */
@@ -247,6 +248,7 @@ html {
     position: absolute;
     top: 340px;
     right: 1300px;
+    z-index: 10;
 }
 
 /* IMAGE SIZES */
@@ -259,8 +261,8 @@ html {
 
 /* until dawn yippie_20260903_191157_0000.png */
 .img-yippie {
-    width: 178px;
-    height: 257px;
+    width: 400px;
+    height: 600px;
 }
 
 /* Без названия (5)_20260903_191218_0000.png */
