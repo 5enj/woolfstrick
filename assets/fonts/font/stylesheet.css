@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Cuprum';
+    src: url('Cuprum-BoldItalic.eot');
+    src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'),
+        url('Cuprum-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Cuprum-BoldItalic.woff2') format('woff2'),
+        url('Cuprum-BoldItalic.woff') format('woff'),
+        url('Cuprum-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    src: url('Cuprum-Regular.eot');
+    src: local('Cuprum Regular'), local('Cuprum-Regular'),
+        url('Cuprum-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Cuprum-Regular.woff2') format('woff2'),
+        url('Cuprum-Regular.woff') format('woff'),
+        url('Cuprum-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    src: url('Cuprum-Italic.eot');
+    src: local('Cuprum Italic'), local('Cuprum-Italic'),
+        url('Cuprum-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Cuprum-Italic.woff2') format('woff2'),
+        url('Cuprum-Italic.woff') format('woff'),
+        url('Cuprum-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    src: url('Cuprum-Bold.eot');
+    src: local('Cuprum Bold'), local('Cuprum-Bold'),
+        url('Cuprum-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Cuprum-Bold.woff2') format('woff2'),
+        url('Cuprum-Bold.woff') format('woff'),
+        url('Cuprum-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
