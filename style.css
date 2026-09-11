@@ -224,45 +224,47 @@ html {
 /* wookfcreek.png */
 .image-left-500 {
     position: absolute;
-    left: -300px;
-    top: 60px;
+    left: 50px;
+    top: 80px;
 }
 
 /* until dawn yippie_20260903_191157_0000.png */
 .image-left-960 {
     position: absolute;
-    left: 650px;
-    top: 60px;
+    right: 80px;
+    top: 150px;
 }
 
 /* Маленьке містечко Вулфкрік... текст */
 .text-top-200-right-200 {
     position: absolute;
-    top: 200px;
-    right: 1000px;
+    top: 120px;
+    left: 420px;
     z-index: 10;
+    max-width: 400px;
 }
 
 /* У ту ніч місцевий історик... текст */
 .text-top-340-right-950 {
     position: absolute;
-    top: 340px;
-    right: 1300px;
+    top: 80px;
+    left: 50px;
     z-index: 10;
+    max-width: 350px;
 }
 
 /* IMAGE SIZES */
 
 /* wookfcreek.png */
 .img-wookfcreek {
-    width: 1376px;
-    height: 768px;
+    width: 350px;
+    height: 196px;
 }
 
 /* until dawn yippie_20260903_191157_0000.png */
 .img-yippie {
-    width: 400px;
-    height: 600px;
+    width: 200px;
+    height: 290px;
 }
 
 /* Без названия (5)_20260903_191218_0000.png */
