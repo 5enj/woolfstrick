@@ -140,45 +140,28 @@ html {
 
 /* STORY BLOCKS */
 .story-block {
-    position: relative;
     background: #000;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    padding: 60px 40px;
+    min-height: auto;
 }
 
 .story-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 0;
-    align-items: stretch;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .story-text {
-    position: absolute;
     background: rgba(209, 176, 95, 0.92);
     padding: 30px 35px;
     border-radius: 30px;
+    flex: 0 1 350px;
     font-size: 18px;
     line-height: 1.8;
     color: #1a1a1a;
-    max-width: 400px;
-    z-index: 10;
-}
-
-.story-text:first-of-type {
-    top: 40px;
-    left: 40px;
-}
-
-.story-text:last-of-type {
-    bottom: 40px;
-    right: 40px;
 }
 
 .story-text p {
@@ -187,48 +170,40 @@ html {
 }
 
 .story-images {
-    position: absolute;
     display: flex;
     gap: 20px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    flex: 1;
+    min-width: 300px;
 }
 
 .story-images img {
-    flex: 1;
-    height: 100%;
+    width: 48%;
+    height: auto;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: 8px;
 }
 
 .story-image-full {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    height: auto;
+    max-height: 500px;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: 8px;
 }
 
 .story-images-grid {
-    position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .story-images-grid img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: 8px;
 }
 
 /* FOOTER */
@@ -262,47 +237,38 @@ html {
         font-size: 12px;
     }
 
-    .story-block {
-        min-height: 600px;
+    .story-content {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 20px;
     }
 
     .story-text {
-        position: absolute;
-        max-width: 85%;
+        width: 100%;
+        flex: 1;
         font-size: 16px;
-        padding: 20px 20px;
+        padding: 25px 20px;
         border-radius: 20px;
-        z-index: 10;
-    }
-
-    .story-text:first-of-type {
-        top: 30px;
-        left: 20px;
-        right: auto;
-    }
-
-    .story-text:last-of-type {
-        bottom: 30px;
-        right: 20px;
-        left: auto;
     }
 
     .story-images,
     .story-images-grid {
-        position: absolute;
         width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
     }
 
     .story-image-full {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        max-height: 400px;
+    }
+
+    .story-images-grid img {
+        height: 200px;
     }
 
     .hero-content {
         padding: 0 20px;
+    }
+
+    .story-block {
+        padding: 40px 0;
     }
 }
