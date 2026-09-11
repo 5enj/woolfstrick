@@ -220,24 +220,29 @@ html {
 }
 
 /* POSITIONING */
+
+/* wookfcreek.png */
 .image-left-500 {
     position: absolute;
     left: 1100px;
     top: 60px;
 }
 
+/* until dawn yippie_20260903_191157_0000.png */
 .image-left-960 {
     position: absolute;
     left: 1900px;
     top: 60px;
 }
 
+/* Маленьке містечко Вулфкрік... текст */
 .text-top-200-right-200 {
     position: absolute;
     top: 200px;
     right: 1000px;
 }
 
+/* У ту ніч місцевий історик... текст */
 .text-top-340-right-950 {
     position: absolute;
     top: 340px;
@@ -245,31 +250,38 @@ html {
 }
 
 /* IMAGE SIZES */
+
+/* wookfcreek.png */
 .img-wookfcreek {
     width: 1376px;
     height: 768px;
 }
 
+/* until dawn yippie_20260903_191157_0000.png */
 .img-yippie {
     width: 178px;
     height: 257px;
 }
 
+/* Без названия (5)_20260903_191218_0000.png */
 .img-scene1 {
     width: 184px;
     height: 258px;
 }
 
+/* Nature forest Cinematic Lighting setup_20260903_191206_0000.png */
 .img-forest {
     width: 207px;
     height: 258px;
 }
 
+/* small.png */
 .img-small {
     width: 187px;
     height: 113px;
 }
 
+/* Без названия (12)_20260903_191248_0000.png */
 .img-scene2 {
     width: 203px;
     height: 257px;
