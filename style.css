@@ -144,7 +144,16 @@ html {
 .story-block {
     background: #000;
     padding: 60px 40px;
-    min-height: auto;
+    min-height: 600px;
+    position: relative;
+}
+
+.story-block-1 {
+    min-height: 850px;
+}
+
+.story-block-2 {
+    min-height: 500px;
 }
 
 .story-content {
@@ -208,6 +217,31 @@ html {
     height: auto;
     object-fit: contain;
     border-radius: 8px;
+}
+
+/* POSITIONING */
+.image-left-500 {
+    position: absolute;
+    left: 500px;
+    top: 60px;
+}
+
+.image-left-960 {
+    position: absolute;
+    left: 960px;
+    top: 60px;
+}
+
+.text-top-200-right-200 {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+}
+
+.text-top-340-right-950 {
+    position: absolute;
+    top: 340px;
+    right: 950px;
 }
 
 /* FOOTER */
