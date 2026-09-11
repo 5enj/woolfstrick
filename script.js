@@ -1,30 +1,30 @@
-const startButton = document.getElementById("startButton");
-const heroVideoContainer = document.getElementById("heroVideoContainer");
-const heroVideo = document.getElementById("heroVideo");
-const dipToBlack = document.getElementById("dipToBlack");
-const videoClose = document.getElementById("videoClose");
+const btnStart = document.getElementById('btnStart');
+const videoContainer = document.getElementById('videoContainer');
+const videoOverlay = document.getElementById('videoOverlay');
+const videoClose = document.getElementById('videoClose');
+const video = document.getElementById('video');
 
-function openVideo() {
-    // Fade to black, then show video — background stays dark while video plays
-    dipToBlack.classList.add("active");
+btnStart.addEventListener('click', () => {
+    videoOverlay.classList.add('active');
+    videoContainer.classList.add('active');
+    video.play();
+});
 
-    setTimeout(() => {
-        heroVideoContainer.classList.add("active");
-        heroVideo.play();
-    }, 800);
-}
+videoClose.addEventListener('click', () => {
+    videoOverlay.classList.remove('active');
+    videoContainer.classList.remove('active');
+    video.pause();
+    video.currentTime = 0;
+});
 
-function closeVideo() {
-    // Hide video, then fade background back in
-    heroVideo.pause();
-    heroVideo.currentTime = 0;
-    heroVideoContainer.classList.remove("active");
+videoOverlay.addEventListener('click', () => {
+    videoOverlay.classList.remove('active');
+    videoContainer.classList.remove('active');
+    video.pause();
+    video.currentTime = 0;
+});
 
-    setTimeout(() => {
-        dipToBlack.classList.remove("active");
-    }, 300);
-}
-
-startButton.addEventListener("click", openVideo);
-videoClose.addEventListener("click", closeVideo);
-heroVideo.addEventListener("ended", closeVideo);
+video.addEventListener('ended', () => {
+    videoOverlay.classList.remove('active');
+    videoContainer.classList.remove('active');
+});

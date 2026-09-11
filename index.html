@@ -3,215 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forest in Woolfstrickt</title>
+    <title>Ліси у Вульфкріті</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <main>
-
         <!-- HERO -->
         <section class="hero">
-
             <div class="hero-content">
                 <h1>
-                    <span class="subtitle">Детективна настільна гра</span>
-                    <span class="game-title">ЛІСИ У ВУЛЬФСТРІКТІ</span>
+                    <span class="subtitle">ДЕТЕКТИВНА НАСТІЛЬНА ГРА</span>
+                    <span class="title">ЛІСИ У ВУЛЬФКРІТІ</span>
                 </h1>
-
-                <button class="start-button" id="startButton">
-                    GET STARTED
-                </button>
+                <button class="btn-start" id="btnStart">GET STARTED</button>
             </div>
 
-            <div class="dip-to-black" id="dipToBlack"></div>
-
-            <div class="hero-video-container" id="heroVideoContainer">
+            <div class="video-overlay" id="videoOverlay"></div>
+            <div class="video-container" id="videoContainer">
                 <button class="video-close" id="videoClose">✕</button>
-                <div class="video-player">
-                    <video id="heroVideo" playsinline controls>
-                        <source src="assets/video/KLIP.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <video id="video" controls playsinline>
+                    <source src="assets/video/KLIP.mp4" type="video/mp4">
+                </video>
             </div>
-
         </section>
 
-
-        <!-- PHOTO SECTION 1 -->
-        <section class="photo-section">
-
-            <!-- Блюр-фон (видимий тільки на мобілці) -->
-            <div
-                class="table-photo"
-                src="assets/images/ChatGPT_Image_23_лип_2026_р_,_03_48_36_20260903_191150_0000.png"
-                alt=""
-               ></div>
-
-            <div class="story-text story-text-top">
-                <p>
-                    Маленьке містечко Вулфкрік,<br>
-                    загублене серед густих лісів штату<br>
-                    Мен, завжди було тихим і спокійним<br>
-                    — до 15 жовтня 1985 року..
-                </p>
-            </div>
-
-            <div class="photo-large photo-large__wolfstrickt">
-                <img
-                    src="assets/images/wookfcreek.png"
-                    alt=""
-                >
-            </div>
-
-            <div class="story-text story-text-bottom story-text-bottom--right">
-                <p>
-                    У ту ніч місцевий історик<br>
-                    Едвард Кроу, відомий своєю<br>
-                    одержимістю стародавніми легендами,<br>
-                    зник безвісти.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- PHOTO SECTION 2 -->
-        <section class="photo-section">
-
-            <!-- Блюр-фон (видимий тільки на мобілці) -->
-            <div
-                class="photo-blur-bg"
-                style="background-image: url('assets/images/Без названия (5)_20260903_191218_0000.jpg')"
-            ></div>
-
-            <div class="story-text story-text-top">
-                <p>
-                    Його будинок знайшли порожнім, але<br>
-                    з явними слідами боротьби: розбиті<br>
-                    меблі, кров на підлозі
-                </p>
-            </div>
-
-            <div class="photo-large">
-                <img
-                    src="assets/images/Без названия (5)_20260903_191218_0000.jpg"
-                    alt=""
-                >
-            </div>
-
-            <div class="photo-small">
-                <img
-                    src="assets/images/Nature forest Cinematic Lighting setup_20260903_191206_0000.jpg"
-                    alt=""
-                >
-            </div>
-
-            <div class="story-text story-text-bottom story-text-bottom--right">
-                <p>
-                    Через тиждень у лісі неподалік<br>
-                    виявили тіло Едварда, але причина<br>
-                    смерті залишилася загадкою.<br>
-                    Експертиза показала, що його серце<br>
-                    зупинилося без видимих причин
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- PHOTO SECTION 3 -->
-        <section class="photo-section">
-
-            <div class="story-text story-text-top">
-                <p>
-                    Місцеві шепталися про стару<br>
-                    легенду: про "Тінь Вулфкріка" —<br>
-                    древню сутність, яка, за<br>
-                    переказами, прокидається кожні<br>
-                    50 років,<br>
-                    щоб забрати нову жертву.
-                </p>
-            </div>
-
-            <div class="photo-triple">
-                <div class="photo-triple__stack">
-                    <div class="photo-triple__stack-item">
-                        <img
-                            src="assets/images/small.jpeg"
-                            alt=""
-                        >
-                    </div>
-                    <div class="photo-triple__stack-item">
-                        <img
-                            src="assets/images/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%2812%29_20260903_191248_0000.jpg"
-                            alt=""
-                        >
-                    </div>
+        <!-- STORY SECTIONS -->
+        <section class="story-block">
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Маленьке містечко Вулфкрік, загублене серед густих лісів штату Мен, завжди було тихим і спокійним — до 15 жовтня 1985 року...</p>
                 </div>
-                <div class="photo-triple__main">
-                    <img
-                        src="assets/images/%40vargavindar_on_Instagram_%E2%80%9Crest_in_pieces%E2%80%9D_20260903_191344_0000.jpg"
-                        alt=""
-                    >
-                </div>
-            </div>
-
-            <div class="story-text story-text-bottom story-text-bottom--right">
-                <p>
-                    Ви є команда детективів із Бюро<br>
-                    спеціальних розслідувань,<br>
-                    яких викликали до Вулфкріка,<br>
-                    щоб розкрити справу. Але час<br>
-                    спливає: з моменту смерті Едварда<br>
-                    минуло 6 днів...
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- MISSION -->
-        <section class="mission">
-            <div class="mission-content">
-                <div class="mission-text">
-                    <span class="mission-label">СПРАВУ ПЕРЕДАНО ВАМ</span>
-                    <h2 class="mission-heading">ВАША ЗАДАЧА — ВИКОРИСТОВУЮЧИ ЛОГІКУ, ІНТУЇЦІЮ ТА ДЕДУКЦІЮ, РОЗКРИТИ ТАЄМНИЦЮ СПРАВИ</h2>
-                </div>
-                <div class="mission-seal">
-                    <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="80" cy="80" r="74" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"/>
-                        <circle cx="80" cy="80" r="66" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
-                        <path id="topArc" fill="none" d="M 18,80 A 62,62 0 0,1 142,80"/>
-                        <text font-size="9.5" fill="rgba(255,255,255,0.7)" font-family="FHA Broken Gothic, Arial" letter-spacing="3.5">
-                            <textPath href="#topArc" startOffset="10%">БЮРО СПЕЦІАЛЬНИХ РОЗСЛІДУВАНЬ</textPath>
-                        </text>
-                        <path id="botArc" fill="none" d="M 22,90 A 60,60 0 0,0 138,90"/>
-                        <text font-size="9" fill="rgba(255,255,255,0.55)" font-family="FHA Broken Gothic, Arial" letter-spacing="2">
-                            <textPath href="#botArc" startOffset="18%">ВУЛФКРІК · 1985</textPath>
-                        </text>
-                        <circle cx="80" cy="80" r="28" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/>
-                        <text x="80" y="76" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="FHA Broken Gothic, Arial" letter-spacing="1">БСР</text>
-                        <text x="80" y="91" text-anchor="middle" font-size="7.5" fill="rgba(255,255,255,0.45)" font-family="FHA Broken Gothic, Arial" letter-spacing="2">ТАЄМНО</text>
-                        <line x1="38" y1="80" x2="52" y2="80" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
-                        <line x1="108" y1="80" x2="122" y2="80" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
-                    </svg>
+                <div class="story-images">
+                    <img src="assets/images/wookfcreek.png" alt="WOLFCREEK">
+                    <img src="assets/images/until dawn yippie_20260903_191157_0000.jpg" alt="MISSING">
                 </div>
             </div>
         </section>
 
+        <section class="story-block">
+            <div class="story-content">
+                <div class="story-text">
+                    <p>У ту ніч місцевий історик Едвард Кроу, відомий своєю одержимістю стародавніми легендами, зник безвісти.</p>
+                </div>
+                <img src="assets/images/Без названия (5)_20260903_191218_0000.jpg" alt="Scene" class="story-image-full">
+            </div>
+        </section>
+
+        <section class="story-block">
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Його будинок знайшли порожнім, але з явними слідами боротьби: розбиті меблі, кров на підлозі</p>
+                </div>
+                <div class="story-images-grid">
+                    <img src="assets/images/Nature forest Cinematic Lighting setup_20260903_191206_0000.jpg" alt="Scene 1">
+                    <img src="assets/images/small.jpeg" alt="Scene 2">
+                </div>
+            </div>
+        </section>
+
+        <section class="story-block">
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Через тиждень у лісі неподалік виявили тіло Едварда, але причина смерті залишилася загадкою. Експертиза показала, що його серце зупинилося без видимих причин</p>
+                </div>
+                <img src="assets/images/Без названия (12)_20260903_191248_0000.jpg" alt="Scene" class="story-image-full">
+            </div>
+        </section>
+
+        <section class="story-block">
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Місцеві шепталися про стару легенду: про "Тінь Вулфкріка" — древню сутність, яка, за переказами, прокидається кожні 50 років, щоб забрати нову жертву.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-block">
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Ви є команда детективів із Бюро спеціальних розслідувань, яких викликали до Вулфкріка, щоб розкрити справу. Але час сплива: з моменту смерті Едварда минуло 6 днів...</p>
+                </div>
+            </div>
+        </section>
 
         <!-- FOOTER -->
         <footer class="footer">
-            <div class="footer-content">
-                <img src="assets/logo.jpg" alt="Logo" class="footer-logo">
-            </div>
+            <img src="assets/logo.jpg" alt="Logo" class="footer-logo">
         </footer>
-
     </main>
 
     <script src="script.js"></script>
-
 </body>
 </html>

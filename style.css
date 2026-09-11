@@ -1,899 +1,274 @@
-@font-face {
-    font-family: "Kleukens Fraktur Cyrillic";
-    src: url("assets/fonts/Kleukens_Fraktur_cyrillic.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "FHA Broken Gothic";
-    src: url("assets/fonts/FHA_Broken_Gothic_No1_NC.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background: #0a0a0a;
+    color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    background: #0a0a0a;
-    color: #ffffff;
-    font-family: "FHA Broken Gothic", Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-}
-
-section {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-}
-
-.section-content {
-    width: 100%;
-    padding: 80px 24px;
-}
-
-.section-label {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.5;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero {
-    min-height: 100svh;
-    display: flex;
-    align-items: flex-end;
-    background-image:
-        linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.15)
-        ),
-        url("assets/images/ChatGPT_Image_23_июл_2026_г_,_06_25_40_20260903_191120_0000.png");
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/ChatGPT_Image_23_июл_2026_г_,_06_25_40_20260903_191120_0000.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .hero-content {
-    position: absolute;
-    left: max(24px, calc(50% - 280px));
-    top: 42%;
-    transform: translateY(-50%);
-    width: calc(100% - 48px);
-    padding: 0;
-}
-
-.hero h1 {
-    margin: 0;
-    line-height: 1;
-    letter-spacing: -0.02em;
+    text-align: left;
     max-width: 500px;
+    padding: 0 40px;
 }
 
-.hero h1 .subtitle {
+.hero-content h1 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.subtitle {
     display: block;
-    font-size: 21px;
-    line-height: 1.1;
-    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    opacity: 0.8;
 }
 
-.hero h1 .game-title {
+.title {
     display: block;
     font-size: 56px;
-    line-height: 1;
-    font-weight: 900;
-    letter-spacing: -0.03em;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-    background: #111111;
-}
-
-.about h2,
-.gallery h2,
-.video-section h2,
-.features h2 {
-    font-size: 42px;
-    line-height: 1;
-    letter-spacing: -0.04em;
-    margin-bottom: 28px;
-}
-
-.about p {
-    max-width: 600px;
-    font-size: 18px;
-    line-height: 1.6;
-    opacity: 0.7;
-}
-
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery {
-    background: #0a0a0a;
-}
-
-.gallery-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-
-/* =========================
-   VIDEO
-========================= */
-
-.video-section {
-    background: #111111;
-}
-
-.video-container {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #000;
-}
-
-
-/* =========================
-   FEATURES
-========================= */
-
-.features {
-    background: #0a0a0a;
-}
-
-.features-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.feature {
-    padding: 28px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.feature h3 {
-    font-size: 13px;
-    opacity: 0.5;
-    margin-bottom: 12px;
-}
-
-.feature p {
-    font-size: 18px;
-    line-height: 1.4;
-}
-
-
-/* =========================
-   MISSION
-========================= */
-
-.mission {
-    background: #000;
-    min-height: unset;
-    display: flex;
-    align-items: center;
-}
-
-.mission-content {
-    width: 100%;
-    padding: 40px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 48px;
-}
-
-.mission-text {
-    max-width: 640px;
-}
-
-.mission-label {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    opacity: 0.45;
-    margin-bottom: 28px;
-}
-
-.mission-heading {
-    font-size: 32px;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
     font-weight: 700;
-    max-width: 580px;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
 }
 
-.mission-seal {
-    flex-shrink: 0;
-    width: 160px;
-    height: 160px;
-    opacity: 0.75;
+.btn-start {
+    background: #b8511d;
+    color: white;
+    border: none;
+    padding: 14px 45px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
-.mission-seal svg {
+.btn-start:hover {
+    background: #9d4519;
+    transform: scale(1.05);
+}
+
+/* VIDEO */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-}
-
-@media (max-width: 768px) {
-    .mission-content {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 32px 20px;
-        gap: 24px;
-    }
-
-    .mission-heading {
-        font-size: 18px;
-    }
-
-    .mission-seal {
-        width: 90px;
-        height: 90px;
-        align-self: flex-end;
-    }
-}
-
-
-
-
-/* =========================
-   START BUTTON
-========================= */
-
-.start-button {
-    display: block;
-    margin: 100px auto 0;
-    padding: 16px 48px;
-    color: #ffffff;
-    background: #c0392b;
-    border: none;
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(192, 57, 43, 0.4);
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
     transition: all 0.3s ease;
 }
 
-.start-button:hover {
-    background: #a93226;
-    box-shadow: 0 6px 24px rgba(192, 57, 43, 0.6);
-    transform: translateY(-2px);
+.video-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
+.video-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 90%;
+    max-width: 800px;
+    z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
 
-/* =========================
-   HERO VIDEO
-========================= */
+.video-container.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+}
 
 .video-close {
     position: absolute;
-    top: -36px;
+    top: -40px;
     right: 0;
     background: none;
     border: none;
-    color: #ffffff;
-    font-size: 18px;
+    color: white;
+    font-size: 28px;
     cursor: pointer;
-    opacity: 0.6;
-    padding: 4px 8px;
-    transition: opacity 0.2s ease;
+    opacity: 0.7;
+    transition: opacity 0.2s;
 }
 
 .video-close:hover {
     opacity: 1;
 }
 
-.hero-video-container {
-    position: absolute;
-    left: 50%;
-    top: 58%;
-    width: calc(100% - 48px);
-    max-width: 600px;
-    transform: translate(-50%, -50%) scale(0.95);
-    opacity: 0;
-    visibility: hidden;
-    transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
-    z-index: 20;
-}
-
-.hero-video-container.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.video-player {
-    width: 100%;
-    aspect-ratio: 16 / 9;
+/* STORY BLOCKS */
+.story-block {
     background: #000;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    padding: 60px 40px;
+    min-height: auto;
 }
 
-.video-player video {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-/* =========================
-   DIP TO BLACK
-========================= */
-
-.dip-to-black {
-    position: absolute;
-    inset: 0;
-    background: #000;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 15;
-    transition: opacity 0.8s ease;
-}
-
-.dip-to-black.active {
-    opacity: 1;
-}
-
-
-/* =========================
-   PHOTO SECTION вЂ” Р±Р°Р·РѕРІР°
-========================= */
-
-.photo-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+.story-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    overflow: hidden;
-    background: #000;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Р‘Р»СЋСЂ-С„РѕРЅ вЂ” РґСѓР±Р»СЋС”РјРѕ С„РѕС‚Рѕ РїРѕР·Р°РґСѓ */
-.photo-blur-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(18px) brightness(0.5);
-    transform: scale(1.08); /* С‰РѕР± РєСЂР°С— РЅРµ РїРѕРєР°Р·СѓРІР°Р»Рё РїСЂРѕР±С–Р»Рё РІС–Рґ blur */
-    z-index: 0;
-    display: none; /* РїРѕРєР°Р·СѓС”РјРѕ С‚С–Р»СЊРєРё РЅР° РјРѕР±С–Р»С†С– */
-}
-
-.photo-large,
-.photo-small {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    flex-shrink: 0;
-}
-
-.photo-large {
-    width: 68%;
-}
-
-.photo-large__wolfstrickt {
-    width: 100%;
-}
-
-.photo-large__wolfstrickt img {
-    object-position: 10% center;
-}
-
-.photo-small {
-    width: 32%;
-}
-
-/* Р—РѕР±СЂР°Р¶РµРЅРЅСЏ РІСЃРµСЂРµРґРёРЅС– */
-.photo-large img,
-.photo-small img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-}
-
-/* Р—Р°С‚РµРјРЅРµРЅРЅСЏ Р·РІРµСЂС…Сѓ/Р·РЅРёР·Сѓ */
-.photo-section::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.45),
-            transparent 35%,
-            transparent 55%,
-            rgba(0, 0, 0, 0.5)
-        );
-}
-
-/* РўРµРєСЃС‚ */
 .story-text {
-    position: absolute;
-    z-index: 3;
-    color: #1a1a1a;
-    font-size: 27px;
-    line-height: 1.45;
-    letter-spacing: -0.01em;
-    max-width: 600px;
     background: rgba(209, 176, 95, 0.92);
-    padding: 24px 28px;
-    backdrop-filter: blur(8px);
-    text-shadow: none;
+    padding: 30px 35px;
+    border-radius: 30px;
+    flex: 0 1 350px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1a1a1a;
 }
 
 .story-text p {
     margin: 0;
+    font-family: 'Courier New', monospace;
 }
 
-.story-text-top {
-    top: 70px;
-    left: 0;
-    padding-left: 24px;
-}
-
-.story-text-bottom {
-    right: 40px;
-    bottom: 70px;
-    text-align: left;
-}
-
-.story-text-bottom--left {
-    right: auto;
-    left: 0;
-    padding-left: 24px;
-}
-
-/* Р¤РѕРЅРё РїРµСЂС€РѕС— СЃРµРєС†С–С— (desktop) */
-.photo-section:nth-of-type(1) .photo-large {
-    background-image: url("assets/images/wookfcreek.png");
-}
-
-.photo-section:nth-of-type(1) .photo-small {
-    background-image: url("assets/images/until dawn yippie_20260903_191157_0000.jpg");
-}
-
-
-/* Три фото: велике зліва + два справа стеком */
-.photo-triple {
+.story-images {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-}
-
-.photo-triple__stack {
-    width: 38%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-}
-
-.photo-triple__stack-item {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-}
-
-.photo-triple__stack-item:first-child {
-    flex: 0 0 38%;
-}
-
-.photo-triple__stack-item:last-child {
+    gap: 20px;
     flex: 1;
+    min-width: 300px;
 }
 
-.photo-triple__stack-item img {
-    display: block;
-    width: 100%;
-    height: 100%;
+.story-images img {
+    width: 48%;
+    height: auto;
     object-fit: cover;
-    object-position: center center;
+    border-radius: 8px;
 }
 
-.photo-triple__main {
-    width: 62%;
-    height: 100%;
-    flex-shrink: 0;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-}
-
-.photo-triple__main img {
-    display: block;
+.story-image-full {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 500px;
     object-fit: cover;
-    object-position: center center;
+    border-radius: 8px;
 }
 
-
-/* =========================
-   STORY SECTION (legacy)
-========================= */
-
-.story-section {
-    min-height: 100vh;
-    background: #0a0a0a;
+.story-images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
 }
 
-.story-content {
+.story-images-grid img {
     width: 100%;
-    padding: 100px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.story-text h2 {
-    font-size: 42px;
-    line-height: 1;
-    letter-spacing: -0.04em;
-    margin-bottom: 28px;
-}
-
-.story-image {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    background: #151515;
-    overflow: hidden;
-}
-
-.story-image img {
-    width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
-    display: block;
+    border-radius: 8px;
 }
 
-
-/* =========================
-   MOBILE вЂ” РґРѕ 768px
-========================= */
-
-@media (max-width: 768px) {
-
-    /* HERO */
-    .hero h1 .subtitle {
-        font-size: 15px;
-    }
-
-    .hero h1 .game-title {
-        font-size: 28px;
-    }
-
-    .hero-content {
-        left: 24px;
-        top: 38%;
-        width: calc(100% - 48px);
-    }
-
-    .start-button {
-        margin: 60px auto 0;
-        font-size: 13px;
-        padding: 12px 32px;
-    }
-
-    /* HERO VIDEO */
-    .hero-video-container {
-        top: 55%;
-        width: calc(100% - 32px);
-    }
-
-    /* PHOTO SECTIONS */
-
-    .photo-blur-bg {
-        display: none;
-    }
-
-    .photo-section {
-        height: auto;
-        min-height: unset;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 0;
-        gap: 0;
-        overflow: hidden;
-    }
-
-    /* Фото на всю ширину, стек без відступів */
-    .photo-large {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 3 / 4;
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
-    .photo-large__wolfstrickt {
-        width: 100%;
-        aspect-ratio: 3 / 4;
-    }
-
-    .photo-large__wolfstrickt img {
-        object-position: 30% center;
-    }
-
-    .photo-small {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        flex-shrink: 0;
-        margin-top: 0;
-    }
-
-    .photo-large img,
-    .photo-small img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-    }
-
-    /* Текст — абсолютно поверх фото (як на десктопі) */
-    .story-text {
-        position: absolute;
-        z-index: 3;
-        font-size: 21px;
-        max-width: 85%;
-        text-shadow:
-            0 2px 12px rgba(0, 0, 0, 0.95),
-            0 4px 24px rgba(0, 0, 0, 0.8);
-    }
-
-    .story-text {
-        background: rgba(209, 176, 95, 0.92) !important;
-        padding: 20px 24px !important;
-        color: #1a1a1a !important;
-        text-shadow: none !important;
-        backdrop-filter: blur(8px);
-    }
-
-    .story-text-top {
-        top: 28px;
-        left: 0;
-        padding-left: 0 !important;
-        order: 0;
-        margin-bottom: 0;
-        align-self: auto;
-    }
-
-    .story-text-bottom {
-        bottom: 28px;
-        right: 0;
-        padding-right: 0 !important;
-        top: auto;
-        left: auto;
-        margin-top: 0;
-        align-self: auto;
-    }
-
-    .story-text-bottom--left {
-        left: 0;
-        right: auto;
-        padding-left: 20px;
-        padding-right: 0;
-        align-self: auto;
-    }
-
-    .story-text-bottom--right {
-        right: 0;
-        left: auto;
-        padding-right: 20px;
-        padding-left: 0;
-        align-self: auto;
-    }
-
-    /* Triple layout — на мобілці стек */
-    .photo-triple {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .photo-triple__main {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 3 / 4;
-    }
-
-    .photo-triple__stack {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-    }
-
-    .photo-triple__stack-item {
-        flex: 1;
-        aspect-ratio: 1 / 1;
-    }
-
-    /* Верхня зона — градієнт + розмиття для тексту */
-    .photo-section::before {
-        display: block;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 220px;
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.72) 0%,
-            rgba(0, 0, 0, 0.3) 60%,
-            transparent 100%
-        );
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        z-index: 2;
-        pointer-events: none;
-        mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
-    }
-
-    /* Нижня зона — градієнт + розмиття для тексту */
-    .photo-section::after {
-        inset: auto 0 0 0;
-        height: 220px;
-        background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.72) 0%,
-            rgba(0, 0, 0, 0.3) 60%,
-            transparent 100%
-        );
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        mask-image: linear-gradient(to top, black 0%, black 60%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to top, black 0%, black 60%, transparent 100%);
-    }
-
-    /* Р—Р°РіРѕР»РѕРІРєРё СЃРµРєС†С–Р№ */
-    .about h2,
-    .gallery h2,
-    .video-section h2,
-    .features h2 {
-        font-size: 28px;
-    }
-
-    .section-content {
-        padding: 60px 20px;
-    }
-
-    /* END */
-    .end h2 {
-        font-size: 13vw;
-    }
-
-    .story-text p {
-        line-height: 1.5;
-    }
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 .footer {
     background: #000;
     padding: 40px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: auto;
-}
-
-.footer-content {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    border-top: 1px solid #222;
 }
 
 .footer-logo {
-    max-width: 100px;
+    max-width: 80px;
     height: auto;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    opacity: 0.7;
 }
 
-.footer-logo:hover {
-    opacity: 1;
-}
-
+/* MOBILE */
 @media (max-width: 768px) {
-    .footer {
-        padding: 30px 20px;
-    }
-
-    .footer-logo {
-        max-width: 80px;
-    }
-}
-
-
-/* =========================
-   MOBILE вЂ” РґРѕ 480px
-========================= */
-
-@media (max-width: 480px) {
-
-    .hero h1 .subtitle {
-        font-size: 13px;
-    }
-
-    .hero h1 .game-title {
+    .title {
         font-size: 32px;
+        margin-bottom: 25px;
     }
 
-    .start-button {
-        margin: 60px auto 0;
+    .subtitle {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .btn-start {
+        padding: 12px 35px;
         font-size: 12px;
-        padding: 12px 28px;
     }
 
-    .photo-large {
-        width: 100%;
-    }
-
-    .photo-large__wolfstrickt {
-        width: 100%;
-    }
-
-    .photo-small {
-        width: 100%;
+    .story-content {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 20px;
     }
 
     .story-text {
-        font-size: 18px;
-        max-width: 88%;
+        width: 100%;
+        flex: 1;
+        font-size: 16px;
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .story-images,
+    .story-images-grid {
+        width: 100%;
+    }
+
+    .story-image-full {
+        max-height: 400px;
+    }
+
+    .story-images-grid img {
+        height: 200px;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .story-block {
+        padding: 40px 0;
     }
 }
