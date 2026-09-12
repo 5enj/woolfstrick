@@ -3,128 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вулфкрік - Інтерактивна гра жахів</title>
-    <meta name="description" content="Вулфкрік - атмосферна гра про містичні надприродні явища у маленькому містечку. Сканусокупі QR-код та вступи в гру.">
+    <title>Ліси у Вульфкрікті — детективна настільна гра</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="subtitle">ІНТЕРАКТИВНА ГРА</span>
-            <h1 class="title">Вулфкрік</h1>
-            <p style="color: #ccc; margin-bottom: 30px; font-size: 16px;">
-                Тиха ніч. Таємничі звуки. Щось чатує в темряві...
-            </p>
-            <button class="btn-start" id="btnStart">Дивитись анонс</button>
+    <!-- BLOCK 1: FULLSCREEN PHOTO + VIDEO TRIGGER -->
+    <section class="hero" id="hero">
+        <div class="hero-tint"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-center">
+            <p class="hero-subtitle">ДЕТЕКТИВНА НАСТІЛЬНА ІГРА</p>
+            <h1 class="hero-title">ЛІСИ У ВУЛЬФКРІКТІ</h1>
+            <button class="btn-get-started" id="btnGetStarted">Get Started</button>
         </div>
     </section>
 
-    <!-- VIDEO OVERLAY -->
-    <div class="video-overlay" id="videoOverlay"></div>
-    <div class="video-container" id="videoContainer">
-        <button class="video-close" id="videoClose">&times;</button>
-        <video id="video" controls width="100%" height="auto">
-            <source src="assets/video/game-trailer.mp4" type="video/mp4">
-            Ваш браузер не підтримує відео.
-        </video>
+    <!-- MODAL FOR VIDEO -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">✕</button>
+            <video class="modal-video" id="modalVideo" controls>
+                <source src="assets/video/KLIP.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 
-    <!-- STORY BLOCK 1 -->
-    <section class="story-block story-block-1">
-        <div class="story-content">
-            <!-- Left text -->
-            <div class="text-top-200-right-200">
-                <div class="story-text">
-                    <p>Маленьке містечко Вулфкрік лежить в глухому лісі. Місцеві кажуть, що це місце сповнено таємниць, що коїються в ніч. Історики розповідають легенди про духів, що мешкають тут...</p>
-                </div>
-            </div>
+    <!-- BLOCK 2: STORY LONGREAD -->
+    <main class="story">
+        <h2 class="visually-hidden">Історія справи</h2>
 
-            <!-- Left image -->
-            <div class="image-wrapper image-left-500">
-                <img src="assets/images/wookfcreek.png" alt="Вулфкрік" class="img-wookfcreek">
-                <span class="image-label label-wookfcreek">Вулфкрік</span>
-            </div>
+        <div class="story__grid">
+            <!-- 1 — дороговказ WOLFCREEK -->
+            <article class="beat beat--start">
+                <img class="beat__img beat__img--focus-left" src="assets/images/wookfcreek.png"
+                     alt="Дерев'яний дороговказ WOLFCREEK на в'їзді до містечка" loading="lazy">
+                <p class="beat__card">
+                    Маленьке містечко Вулфкрік, загублене серед густих лісів штату Мен,
+                    завжди було тихим і спокійним — до 15 жовтня 1985 року.
+                </p>
+            </article>
 
-            <!-- Right image and text -->
-            <div class="text-top-340-right-950">
-                <div class="story-text">
-                    <p>У ту ніч місцевий історик Джеймс розповідав гостям про древні лиха, що ховаються в лісі. Нікому й не спало на думку, що це не була просто історія...</p>
-                </div>
-            </div>
+            <!-- 2 — дошка розшуку -->
+            <article class="beat beat--end">
+                <img class="beat__img" src="assets/images/scene-flashlight-figure.png"
+                     alt="Дошка з оголошеннями про зниклих безвісти" loading="lazy">
+                <p class="beat__card">
+                    У ту ніч місцевий історик Едвард Кроу, відомий своєю одержимістю
+                    стародавніми легендами, зник безвісти.
+                </p>
+            </article>
 
-            <!-- Right image -->
-            <div class="image-wrapper image-left-960">
-                <img src="assets/images/until dawn yippie_20260903_191157_0000.png" alt="Історик Джеймс" class="img-yippie">
-                <span class="image-label label-yippie">Джеймс</span>
-            </div>
+            <!-- 3 — нічний ліс, ліхтарі -->
+            <article class="beat beat--start">
+                <img class="beat__img" src="assets/images/scene-forest-lighting.png"
+                     alt="Нічний ліс у світлі ліхтарів під час пошуків" loading="lazy">
+                <p class="beat__card">
+                    Його будинок знайшли порожнім, але з явними слідами боротьби:
+                    розбиті меблі, кров на підлозі.
+                </p>
+            </article>
+
+            <!-- 4 — місце події, поліцейська стрічка -->
+            <article class="beat beat--end">
+                <img class="beat__img" src="assets/images/scene-collage-1.png"
+                     alt="Місце події вночі, огороджене поліцейською стрічкою" loading="lazy">
+                <p class="beat__card">
+                    Через тиждень у лісі неподалік виявили тіло Едварда, але причина смерті
+                    залишилася загадкою. Експертиза показала, що його серце зупинилося
+                    без видимих причин.
+                </p>
+            </article>
+
+            <!-- 5 — Тінь Вулфкріка -->
+            <article class="beat beat--start">
+                <img class="beat__img" src="assets/images/scene-collage-2.png"
+                     alt="Постать у чорному з козячим черепом серед дерев" loading="lazy">
+                <p class="beat__card">
+                    Місцеві шепталися про стару легенду — про Тінь Вулфкріка, древню сутність,
+                    яка, за переказами, прокидається кожні 30 років, щоб забрати нову жертву.
+                </p>
+            </article>
+
+            <!-- 6 — ритуал, свічки та карти -->
+            <article class="beat beat--end">
+                <img class="beat__img" src="assets/images/small.jpeg"
+                     alt="Ритуал зі свічками та розкладеними картами на землі" loading="lazy">
+                <p class="beat__card">
+                    Ви — команда детективів з бюро спеціальних розслідувань, яких викликали
+                    до Вулфкріка, щоб розкрити справу. Але час спливає: з моменту смерті
+                    Едварда минуло 3 дні.
+                </p>
+            </article>
         </div>
-    </section>
 
-    <!-- STORY BLOCK 2 -->
-    <section class="story-block story-block-2">
-        <div class="story-content">
-            <!-- Left text -->
-            <div class="story-text" style="flex: 0 1 400px;">
-                <p>Щойно світло зникло, почалися незвичайні явища. Голоси в темряві, тіні, що рухаються власною волею, холод, що пронизує душу. Гості розуміють, що вони опинилися посередині щось надприродного.</p>
+        <!-- BLOCK 3: FINAL HANDOFF PANEL -->
+        <section class="handoff">
+            <div class="handoff__text">
+                <p class="handoff__label">справу передано вам</p>
+                <p class="handoff__cta">
+                    ваша задача — використовуючи <em>логіку</em>, <em>інтуїцію</em>
+                    та <em>дедукцію</em>, розкрити таємницю справи
+                </p>
             </div>
 
-            <!-- Right images grid -->
-            <div class="story-images-grid">
-                <img src="assets/images/Без названия (5)_20260903_191218_0000.png" alt="Сцена 1" class="img-scene1">
-                <img src="assets/images/Nature forest Cinematic Lighting setup_20260903_191206_0000.png" alt="Ліс" class="img-forest">
-                <img src="assets/images/small.png" alt="Деталь" class="img-small">
-                <img src="assets/images/Без названия (12)_20260903_191248_0000.png" alt="Сцена 2" class="img-scene2">
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="story-block" style="padding: 80px 40px; text-align: center;">
-        <div style="max-width: 700px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #d1b05f; margin-bottom: 30px; font-family: 'Oranienbaum', serif;">Як грати?</h2>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px;">
-                <div style="color: #ccc;">
-                    <h3 style="color: #d1b05f; margin-bottom: 15px; font-size: 24px;">1. Сканування</h3>
-                    <p>Наведіть камеру на QR-код, щоб потрапити до гри</p>
-                </div>
-                <div style="color: #ccc;">
-                    <h3 style="color: #d1b05f; margin-bottom: 15px; font-size: 24px;">2. Занурення</h3>
-                    <p>Вступіть у світ Вулфкріка та зустріньте його мешканців</p>
-                </div>
-                <div style="color: #ccc;">
-                    <h3 style="color: #d1b05f; margin-bottom: 15px; font-size: 24px;">3. Вибір</h3>
-                    <p>Ваші рішення визначають перебіг історії</p>
-                </div>
-                <div style="color: #ccc;">
-                    <h3 style="color: #d1b05f; margin-bottom: 15px; font-size: 24px;">4. Фінал</h3>
-                    <p>Множественні концівки чекають на вас</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="story-block" style="padding: 60px 40px; text-align: center; border-top: 1px solid #333;">
-        <div style="max-width: 600px; margin: 0 auto;">
-            <h2 style="font-size: 36px; color: #d1b05f; margin-bottom: 20px; font-family: 'Oranienbaum', serif;">Готові до пригоди?</h2>
-            <p style="color: #999; font-size: 16px; margin-bottom: 30px;">Скануйте QR-код нижче, щоб почати</p>
-            <div style="background: white; padding: 20px; border-radius: 12px; display: inline-block; margin-bottom: 30px;">
-                <img src="assets/images/qr-code.png" alt="QR код" style="width: 200px; height: 200px;">
-            </div>
-            <p style="color: #666; font-size: 12px;">або</p>
-            <button class="btn-start" style="margin-top: 15px;">Грати зараз</button>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <p style="color: #666; margin-bottom: 15px; font-size: 12px;">© 2026 Вулфкрік - Інтерактивна гра</p>
-            <p style="color: #555; font-size: 11px;">Сканується через QR-код | Відкривається в браузері | Комбінована реальність</p>
-        </div>
-    </footer>
+            <figure class="handoff__seal">
+                <img src="assets/images/logo.jpg" alt="Печатка Laboratory 17 Detective Club" loading="lazy">
+            </figure>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
