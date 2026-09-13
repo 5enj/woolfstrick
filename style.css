@@ -69,10 +69,10 @@ img {
 .hero {
     position: relative;
     display: grid;
-    min-height: 120svh;
+    height: 100svh;
     place-items: center;
     overflow: hidden;
-    padding: 72px 20px;
+    padding: 0px 0px;
     background-image: url("assets/images/hero-forest-figure.png");
     background-position: center;
     background-size: cover;
@@ -104,7 +104,7 @@ img {
     background: #000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.8s ease;
+    transition: opacity 3s ease;
 }
 
 .hero-overlay.fade-black {
