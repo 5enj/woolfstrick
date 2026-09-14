@@ -104,7 +104,7 @@ img {
     background: #000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 8s ease;
+    transition: opacity 3s ease;
 }
 
 .hero-overlay.fade-black {
@@ -172,7 +172,7 @@ img {
     background: rgba(0, 0, 0, 0.94);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.35s ease, visibility 0.35s ease;
+    transition: opacity 3s ease, visibility 3s ease;
 }
 
 .video-modal.active {
