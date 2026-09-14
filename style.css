@@ -116,6 +116,7 @@ img {
     z-index: 3;
     width: min(100%, 780px);
     text-align: center;
+    transform: translateY(40px);
 }
 
 .hero-subtitle {
@@ -194,20 +195,6 @@ img {
 .modal-video {
     width: 100%;
     background: #000;
-}
-
-.modal-close {
-    position: absolute;
-    right: 0;
-    bottom: calc(100% + 12px);
-    width: 42px;
-    height: 42px;
-    border: 1px solid rgba(251, 247, 239, 0.65);
-    background: transparent;
-    color: var(--paper);
-    cursor: pointer;
-    font-size: 28px;
-    line-height: 1;
 }
 
 .story {
@@ -393,7 +380,7 @@ body {
     display: grid;
     justify-items: center;
     width: 100%;
-    transform: translateY(-82px);
+    transform: translateY(-167px);
 }
 
 .hero-subtitle {
@@ -476,11 +463,13 @@ body {
 .beat:nth-child(3),
 .beat:nth-child(4) {
     min-height: 270px;
+    border-top: 10px solid #000;
 }
 
 .beat:nth-child(5),
 .beat:nth-child(6) {
     min-height: 242px;
+    border-top: 10px solid #000;
 }
 
 .beat__img {

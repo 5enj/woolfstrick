@@ -1,7 +1,6 @@
 const btnGetStarted = document.getElementById('btnGetStarted');
 const videoModal = document.getElementById('videoModal');
 const modalContent = document.querySelector('.modal-content');
-const closeModal = document.getElementById('closeModal');
 const modalVideo = document.getElementById('modalVideo');
 const heroOverlay = document.querySelector('.hero-overlay');
 
@@ -32,8 +31,6 @@ function closeVideoModal() {
 }
 
 btnGetStarted.addEventListener('click', () => openVideoModal(btnGetStarted));
-
-closeModal.addEventListener('click', closeVideoModal);
 
 // Close modal when clicking on background
 videoModal.addEventListener('click', (e) => {
